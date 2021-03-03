@@ -4,23 +4,24 @@ export class TodoList extends Component {
 
     render() {
         return (
-            <div>
-                <label>
-                    Cadastrar nova categoria de erro:
-                    <input onKeyUp={this.props.onAddTask} autoFocus type='text'/>
-                    <p>Categorias:</p>
-                    <ul>
-                        {this.props.tasks.map(task =>{
-                            return <li>{task}</li>
-                        })}
-                    </ul>
-                    <table align="center" border="1">
-                        {this.props.tasks.map(task =>{
-                            return <tr><td>{task}</td></tr>
-                        })}
-                    </table>
+
+             <div>
+             <nav>
+             <ul> <font color="#000000"><b>USER INTERFACE</b></font> 
+                 {this.props.tasks.map(task =>{
+                     return <li><a href="">{task}</a></li>
+                 })}
+             </ul>
+             </nav>
+
+                    <label>
+                      Adicionar  Erro:&nbsp;
+                      <input onKeyUp={this.props.onAddTask} autoFocus type='text'/>
+
+
                 </label>
-            </div>
+              </div>
+
 
         )
     }

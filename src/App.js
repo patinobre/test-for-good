@@ -1,29 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import login from './login.svg';
+import search from './search.svg';
 import './App.css';
 import {TodoList} from './components/todo';
 
-
-//function App() {
-  //return (
-    //<div className="App">
-      //<header className="App-header">
-      //  <img src={logo} className="App-logo" alt="logo" />
-        //<p>
-          //Edit <code>src/App.js</code> and save to reload.
-        //</p>
-        //<a
-          //className="App-link"
-          //href="https://reactjs.org"
-        //  target="_blank"
-          //rel="noopener noreferrer"
-        //>
-        //  Learn React
-      //  </a>
-    //  </header>
-    //</div>
-//);
-//}
 
 
 class App extends Component {
@@ -32,8 +13,8 @@ class App extends Component {
     super();
 
     this.state = {
-      tasks: ['User Interface','User Experience','App Security','App Performance']
-    };
+      tasks: ['User Experience','App Security','App Performance','Server Side Error'],
+          };
   }
 
   addTask(event) {
@@ -47,8 +28,9 @@ class App extends Component {
   return(
     <div className="App">
       <h5> Test for Good </h5>
-      <img src={logo} alt="logo"/>
+      <img src={search} alt="search"/>&nbsp;<img src={logo} alt="logo"/>&nbsp;<img src={login} alt="login"/>
         <TodoList onAddTask={(event) => this.addTask(event)} tasks={this.state.tasks} />
+        <h5>Colaboração na busca de solução</h5>
     </div>
   );
 }
